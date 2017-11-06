@@ -3,24 +3,24 @@ package test;
 import java.util.Scanner;
 
 public class Game {
-	Mastermind mas;
-	PlusOuMoins plm;
+	Mastermind mastermind;
+	MoreAndLess moreAndLess;
 	public void start() {
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("***********************************************************");
 		System.out.println("Bienvenue !!! Veuillez choisir un jeu entre 1 et 2 :");
 		System.out.println("1.Mastermind");
 		System.out.println("2.Plus ou moins");
 		System.out.println("***********************************************************");
-		String str = sc.nextLine();
-		switch(str) {
+		String recoveryReponse = scanner.nextLine();
+		switch(recoveryReponse) {
 		case "1":
-			mas = new Mastermind();
-			mas.toString();
+			mastermind = new Mastermind();
+			mastermind.toString();
 			break;
 		case "2":
-			plm = new PlusOuMoins();
-			plm.toString();
+			moreAndLess = new MoreAndLess();
+			//moreAndLess.toString();
 			break;
 			default:
 				System.out.println("Mauvais choix");
